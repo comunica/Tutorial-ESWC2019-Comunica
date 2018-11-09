@@ -19,3 +19,6 @@ As a result, participants from different backgrounds
 will be able to query Linked Data on their own,
 either for research or for development purposes.
 <!-- Perspectives -->
+
+Rewrite abstract with a focus on Comunica
+{:.todo}

@@ -1,15 +1,21 @@
 ## Abstract
 <!-- Context      -->
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+The availability of Linked Data is continuously increasing,
+and different _querying_ techniques exist to consume this Linked Data.
 <!-- Need         -->
-Vestibulum finibus dignissim augue, id pellentesque est facilisis non.
+In order to allow developers and researchers to become familiar
+with the domain of Linked Data querying,
 <!-- Task         -->
-Donec fringilla dolor non neque iaculis blandit.
+we provide an overview of the domain in this tutorial.
 <!-- Object       -->
-Praesent aliquet eleifend iaculis.
+We first explain the standardized SPARQL language and protocol,
+together with some non-standard alternatives.
+After that, we use a state-of-the-art
+query engine in which different querying techniques
+will be demonstrated.
 <!-- Findings     -->
-Quisque pellentesque at odio ac bibendum.
 <!-- Conclusion   -->
-Pellentesque imperdiet felis urna, quis facilisis lacus gravida non.
+As a result, participants from different backgrounds
+will be able to query Linked Data on their own,
+either for research or for development purposes.
 <!-- Perspectives -->
-Donec quis lectus eget sem tempor tristique pellentesque in dolor.

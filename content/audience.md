@@ -1,5 +1,5 @@
-## Objectives
-{:#objectives}
+## Audience
+{:#audience}
 
 * Target audience and strategy for attracting participants
 * Objectives

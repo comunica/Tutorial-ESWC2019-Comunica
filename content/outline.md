@@ -10,7 +10,5 @@ Together with the audience, installation and usage of Comunica
 within a JavaScript application will be demonstrated.
 After that, we will go a step further,
 and guide the audience through the process of configuring Comunica.
-
-
-* Scope and level of detail for the topics to be covered
-{:.todo}
+Finally, we will guide the implementation of a simple querying algorithm
+as a Comunica module.

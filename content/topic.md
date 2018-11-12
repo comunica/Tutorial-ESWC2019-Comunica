@@ -1,12 +1,13 @@
 ## Topic and Relevance
 {:#topic}
 
-Querying is a key aspect of the [Semantic Web Stack](cite:cites semanticweb).
-Both researchers and sofware engineers are very active in this domain.
-As such, a lot of useful techniques and tools exist for querying Linked Data.
-The goal of this tutorial is to provide
+Querying is a key aspect of the [Semantic Web Stack](cite:cites semanticweb),
+and a large variety of querying _algorithms_ for different kinds of Linked Data _interfaces_ already exist.
+There are still plenty of open problems
+that elicit research on new querying techniques and combinations of existing ones.
 
-* Motivation
-* Scope and level of detail for the topics to be covered
-* Relevance to ESWC 2019
-{:.todo}
+[Comunica](cite:cites comunica) is a _meta_ query engine that was introduced
+as a tool to facilitate the development, testing, and evaluation of such querying capabilities.
+This is the first tutorial that is dedicated to Comunica.
+Before that, Comunica was used as a tool to demonstrate various querying capabilities in a tutorial
+on [_Knowledge Representation as Linked Data_](cite:cites cikm) at the CIKM conference 2018.

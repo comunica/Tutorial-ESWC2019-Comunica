@@ -10,4 +10,5 @@ that elicit research on new querying techniques and combinations of existing one
 as a tool to facilitate the development, testing, and evaluation of such querying capabilities.
 This is the first tutorial that is dedicated to Comunica.
 Before that, Comunica was used as a tool to demonstrate various querying capabilities in a tutorial
-on [_Knowledge Representation as Linked Data_](cite:cites cikm) at the CIKM conference 2018.
+on [_Knowledge Representation as Linked Data_](cite:cites cikm)
+([http://rml.io/cikm2018tutorial/](http://rml.io/cikm2018tutorial/)) at the CIKM conference 2018.

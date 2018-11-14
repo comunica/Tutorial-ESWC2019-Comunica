@@ -5,10 +5,10 @@ We plan a full day for this tutorial as shown in [](#planning).
 The morning session will consist of presentations,
 in which the motivation and purpose of Comunica will be explained,
 followed by an overview of its architecture.
-We will first explain the architecture of the
-[Components.js](cite:cites componentsjs) dependency injection framework
-that Comunica relies upon, followed by an overview
-of the architecture of Comunica itself.
+We will first explain the architecture of Comunica.
+After that, we will give an overview of [Components.js](cite:cites componentsjs),
+which is a dependency injection framework
+that Comunica relies upon to handle the configuration of engines.
 In the afternoon, we will have a hands-on session.
 Together with the audience, installation and usage of Comunica
 within a JavaScript application will be demonstrated.
@@ -28,8 +28,8 @@ to still begin with the next task by checking out a different branch.
 |                           | Topic | Duration |
 |---------------------------|-------|----------|
 | **Morning** (_3:00_)      | Introduction | 0:15   |
-|                           | Architecture: Components.js | 1:15   |
 |                           | Architecture: Comunica  | 1:15   |
+|                           | Configuration with Components.js | 1:15   |
 |                           | Browser usage examples  | 0:15   |
 | **Afternoon** (_3:00_)    | Installation | 0:15   |
 |                           | Usage inside an application | 1:15   |

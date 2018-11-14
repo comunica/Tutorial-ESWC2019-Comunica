@@ -16,6 +16,7 @@ which implements the [SPARQL 1.1](cite:cites spec:sparqllang) specification usin
 This engine is able to federate queries over heterogeneous interfaces,
 for example, one can execute a SPARQL query over the combination of a SPARQL endpoint
 and a collection Linked Data documents on the Web.
+This functionality is demonstrated via our [Web application](http://query.linkeddatafragments.org/){:.mandatory}.
 Thanks to the modularity of Comunica, support for new kinds of datasources
 can be added by writing a custom module, and plugging it in.
 
@@ -28,8 +29,7 @@ because algorithms are implemented in the same engine,
 instead of comparing completely different engines with a potentially different stack.
 
 The Comunica platform is fully open-source,
-which makes it easier to learn from the code, and reuse it,
-and it is open to contributors.
+which makes it easy to learn from the code when new modules need to be implemented.
 Furthermore, it is written in JavaScript,
 which makes it possible to run engines anywhere,
 both locally on your machine, or on the Web via a browser.

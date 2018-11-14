@@ -17,5 +17,6 @@ and demonstrates its usage for research purposes.
 As a result, participants from different backgrounds
 will be able to query Linked Data with Comunica,
 and modify the querying process with custom algorithms.
-Ultimately, this reduces development-effort within the research domain of Linked Data querying.
+Ultimately, this reduces development-effort for researching
+and evaluating new Linked Data querying techniques.
 <!-- Perspectives -->

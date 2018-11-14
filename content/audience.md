@@ -7,6 +7,9 @@ We assume elementary knowledge on RDF and SPARQL,
 and more advanced concepts will be tackled depending on the competences of the audience.
 We expect participants to bring a laptop that has [Node.js](https://nodejs.org/) installed,
 which is required for setting up the Comunica development environment during the tutorial.
+Furthermore, an editor that is able to handle JavaScript and TypeScript is encouraged,
+such as [WebStorm](https://www.jetbrains.com/webstorm/){:.mandatory},
+which is available for free under its academic license.
 The end-goal is to provide participants with sufficient knowledge and experience within the Comunica platform
 to use it to query, tweaking its configuration, and implementing custom modules.
 In order to attract participants,

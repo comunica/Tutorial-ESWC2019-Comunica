@@ -2,13 +2,13 @@
 {:#topic}
 
 Querying is a key aspect of the [Semantic Web Stack](cite:cites semanticweb),
-and a large variety of querying _algorithms_ for different kinds of Linked Data _interfaces_ already exist.
+and a large variety of _query algorithms_ for different kinds of Linked Data _interfaces_ already exist.
 There are still plenty of open problems
 that elicit research on new querying techniques and combinations of existing ones.
 
-[Comunica](cite:cites comunica) is a _meta_ query engine that was introduced
+[Comunica](cite:cites comunica) is a _meta query engine_ that was introduced
 as a tool to facilitate the development, testing, and evaluation of such querying capabilities.
-As such, it is a tool with which query engines can be _created_,
+As such, it is a tool with which query engines can be created,
 based on a set of modules,
 and a flexible configuration system to wire them together.
 One example of such a query engine instantiation is [Comunica SPARQL](https://github.com/comunica/comunica/tree/master/packages/actor-init-sparql){:.mandatory},

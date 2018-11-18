@@ -33,7 +33,7 @@ to still begin with the next task by checking out a different branch.
 |                           | Browser usage examples  | 0:15   |
 | **Afternoon** (_3:00_)    | Installation | 0:15   |
 |                           | Usage inside an application | 1:15   |
-|                           | Plugging in a custom algorithm | 1:30   |
+|                           | Adding a custom algorithm | 1:30   |
 
 <figcaption markdown="block">
 Planning of the Comunica tutorial

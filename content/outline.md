@@ -1,13 +1,13 @@
 ## Outline
 {:#outline}
 
-We plan a full day for this tutorial as shown in [](#planning).
-In the morning, we will cover the basics of Comunica.
-In the afternoon, the more advanced concepts will be handled.
-Both sessions will start with presentations,
+We plan a half day for this tutorial as shown in [](#planning).
+First, we will cover the basics of Comunica.
+In the next session, the more advanced concepts will be handled.
+Both sessions will start with short presentations,
 and the end will be practical.
 
-The morning session will consist of an introductory presentation
+The first session will consist of an introductory presentation
 in which the motivation and purpose of Comunica will be explained,
 followed by an overview of its architecture.
 Next, we will demonstrate the usage of Comunica
@@ -15,7 +15,7 @@ with several SPARQL queries in the [browser-based client](http://query.linkeddat
 After that, we will guide the audience through the installation
 and usage of Comunica within a JavaScript application.
 
-In the afternoon, we will focus on the configuration and extensibility of Comunica.
+In the second session, we will focus on the configuration and extensibility of Comunica.
 We will first give an overview of [Components.js](cite:cites componentsjs),
 which is a dependency injection framework
 that Comunica relies upon to handle the configuration of engines.
@@ -33,13 +33,11 @@ to still begin with the next task by checking out a different branch.
 
 |                                  | Topic | Duration |
 |----------------------------------|-------|----------|
-| **Morning: basic** (_3:00_)      | Introduction | 0:15   |
-|                                  | Architecture: Comunica  | 1:15   |
+| **Part 1: basic** (_1:30_)       | Introduction to Comunica | 0:30   |
 |                                  | Browser usage examples  | 0:15   |
-|                                  | Usage inside an application | 1:15   |
-| **Afternoon: advanced** (_3:00_) | Installation | 0:15   |
-|                                  | Configuration with Components.js | 0:45   |
-|                                  | Adding a custom algorithm | 2:00   |
+|                                  | Usage inside an application | 0:45   |
+| **Part 2: advanced** (_1:30_)    | Configuration with Components.js | 0:30   |
+|                                  | Adding a custom algorithm | 1:00   |
 
 <figcaption markdown="block">
 Planning of the Comunica tutorial

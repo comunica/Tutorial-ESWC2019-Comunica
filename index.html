@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Querying Linked Data with Comunica</title>
+  <link rel="stylesheet" media="screen" href="styles/screen.css" />
+  <link rel="stylesheet" media="print"  href="styles/print.css" />
+  
+</head>
+<body prefix="cc: https://creativecommons.org/ns# rdfs: http://www.w3.org/2000/01/rdf-schema#">
+  <header>
+  <h1 id="querying-linked-data-with-comunica">Querying Linked Data with Comunica</h1>
+
+  <ul id="authors">
+    <li><a href="http://www.rubensworks.net/" typeof="http://xmlns.com/foaf/0.1/Person" resource="http://www.rubensworks.net/#me">Ruben Taelman</a></li>
+    <li><a href="#" typeof="http://xmlns.com/foaf/0.1/Person" resource="https://data.verborgh.org/people/joachim_van_herwegen">Joachim Van Herwegen</a></li>
+    <li><a href="#" typeof="http://xmlns.com/foaf/0.1/Person" resource="https://data.verborgh.org/people/miel_vander_sande">Miel Vander Sande</a></li>
+    <li><a href="https://ruben.verborgh.org/" typeof="http://xmlns.com/foaf/0.1/Person" resource="https://ruben.verborgh.org/profile/#me">Ruben Verborgh</a></li>
+  </ul>
+
+  <ul id="affiliations">
+    <li id="idlab">IDLab,
+          Department of Electronics and Information Systems,
+          Ghent University – imec</li>
+  </ul>
+
+  <center class="screen-only">
+<a href="http://comunica.linkeddatafragments.org/"><img src="img/logo.svg" height="400px" /></a>
+</center>
+
+  <section class="context">
+    <p>Tutorial at <a href="https://2019.eswc-conferences.org/call-for-tutorials/" rel="as:inReplyTo">ESWC 2019</a>, June 2nd or 3rd 2018</p>
+  </section>
+
+  <p><br /></p>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <!-- Context      -->
+    <p><em>Querying Linked Data</em> on the Web is a non-trivial endeavour
+because of the <em>heterogeneity</em> of Linked Data publication interfaces
+and the large <em>variety</em> of querying algorithms.
+We recently introduced a meta query engine, called <a href="http://comunica.linkeddatafragments.org/"><em>Comunica</em></a>,
+as a <em>research platform</em> that offers a way to cope with this complexity.
+<!-- Need         -->
+To enable researchers to easily get started with Comunica.
+<!-- Task         -->
+we offer this introductory tutorial.</p>
+
+    <p><br class="screen-only" /></p>
+
+    <!-- Object       -->
+    <p>The tutorial consists of an overview of the capabilities of this platform,
+and demonstrates its usage for <em>research purposes</em>.
+<!-- Findings     -->
+<!-- Conclusion   -->
+As a result, participants from different backgrounds
+will be able to query Linked Data with Comunica,
+and modify the querying process with custom algorithms.
+Ultimately, this will reduce the effort needed to <em>develop</em>
+and <em>evaluate</em> new Linked Data querying techniques.
+<!-- Perspectives --></p>
+
+  </section>
+
+</header>
+
+<section class="contents screen-only">
+  <h2 id="contents">Contents</h2>
+  <ul>
+    <li><a href="#topic">Topic and Relevance</a></li>
+    <li><a href="#audience">Audience</a></li>
+    <li><a href="#outline">Outline</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#organizers">Organizers</a></li>
+  </ul>
+</section>
+
+<main>
+  <section id="topic">
+    <h2>Topic and Relevance</h2>
+
+    <p>Querying is a key aspect of the Semantic Web Stack <span class="references">[<a href="#ref-1">1</a>]</span>,
+and a large variety of <em>query algorithms</em> for different kinds of Linked Data <em>interfaces</em> already exist.
+There are still plenty of open problems
+that elicit research on new querying techniques and combinations of existing ones.</p>
+
+    <p><a property="schema:citation http://purl.org/spar/cito/cites" href="https://comunica.github.io/Article-ISWC2018-Resource/">Comunica</a> <span class="references">[<a href="#ref-2">2</a>]</span> is a <em>meta query engine</em> that was introduced
+as a tool to facilitate the development, testing, and evaluation of such querying capabilities.
+As such, it is a tool with which query engines can be created,
+based on a set of modules,
+and a flexible configuration system to wire them together.
+One example of such a query engine instantiation is <a href="https://github.com/comunica/comunica/tree/master/packages/actor-init-sparql" class="mandatory" data-link-text="https:/​/​github.com/​comunica/​comunica/​tree/​master/​packages/​actor-​init-​sparql">Comunica SPARQL</a>,
+which implements the <a property="schema:citation http://purl.org/spar/cito/cites" href="https://www.w3.org/TR/2013/REC-sparql11-query-20130321/">SPARQL 1.1</a> <span class="references">[<a href="#ref-3">3</a>]</span> specification using an efficient set of modules.
+This engine is able to federate queries over heterogeneous interfaces,
+for example, one can execute a SPARQL query over the combination of a SPARQL endpoint
+and a collection Linked Data documents on the Web.
+This functionality is demonstrated via our <a href="http://query.linkeddatafragments.org/" class="mandatory" data-link-text="http:/​/​query.linkeddatafragments.org/​">Web application</a>.
+Thanks to the modularity of Comunica, support for new kinds of datasources
+can be added by writing a custom module, and plugging it in.</p>
+
+    <p>The modularity and flexibility of Comunica is useful for research purposes,
+as it allows you to easily plug in different algorithms of certain query operators,
+and compare their performance.
+Not only does this lower the barrier towards such evaluations,
+it also makes these evaluations <em>fair</em>,
+because algorithms are implemented in the same engine,
+instead of comparing completely different engines with a potentially different stack.</p>
+
+    <p>The Comunica platform is fully open-source,
+which makes it easy to learn from the code when new modules need to be implemented.
+Furthermore, it is written in JavaScript,
+which makes it possible to run engines anywhere,
+both locally on your machine, or on the Web via a browser.</p>
+
+    <p>This is the first tutorial that is dedicated to Comunica.
+Before that, Comunica was used as a tool to demonstrate various querying capabilities in a tutorial
+on <em>Knowledge Representation as Linked Data</em> <span class="references">[<a href="#ref-4">4</a>]</span>
+(<a href="http://rml.io/cikm2018tutorial/">http:/​/​rml.io/cikm2018tutorial/</a>) at the CIKM conference 2018.</p>
+
+  </section>
+
+  <section id="audience">
+    <h2>Audience</h2>
+
+    <p>This tutorial focuses on all <em>researchers</em> that are active in the domain of <em>querying Linked Data</em>,
+and <em>developers</em> that are interested in a flexible querying platform.
+We assume <em>elementary knowledge on RDF and SPARQL</em>,
+and more advanced concepts will be tackled depending on the competences of the audience.
+We expect participants to bring a laptop that has <em><a href="https://nodejs.org/">Node.js</a></em> installed,
+which is required for setting up the Comunica development environment during the tutorial.
+Furthermore, an <em>editor or IDE with JavaScript and/or TypeScript support</em>
+will come in handy.</p>
+
+    <p>The end-goal is to provide participants with sufficient knowledge and experience within the Comunica platform
+to use it to query, tweaking its configuration, and implementing custom modules.</p>
+
+    <p>In order to attract participants,
+we will announce it over the relevant querying-related Semantic Web mailing lists,
+via Twitter, and directly via Gitter chat channels focused on Linked Data development.</p>
+
+  </section>
+
+  <section id="outline">
+    <h2>Outline</h2>
+
+    <p>We plan a half day for this tutorial as shown in <a href="#planning">Table 1</a>.
+First, we will cover the basics of Comunica.
+In the next session, the more advanced concepts will be handled.
+Both sessions will start with short presentations,
+and the end will be practical.</p>
+
+    <figure id="planning" class="table">
+
+      <table>
+        <thead>
+          <tr>
+            <th> </th>
+            <th>Topic</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Part 1: basic</strong> (<em>1:30</em>)</td>
+            <td>Introduction to Comunica</td>
+            <td>0:30</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Browser usage examples</td>
+            <td>0:15</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Usage inside an application</td>
+            <td>0:45</td>
+          </tr>
+          <tr>
+            <td><em>Break</em></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Part 2: advanced</strong> (<em>1:30</em>)</td>
+            <td>Configuration with Components.js</td>
+            <td>0:30</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Adding a custom algorithm</td>
+            <td>1:00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figcaption>
+        <p><span class="label">Table 1:</span> Planning of the Comunica tutorial, split into basic and advanced sessions.</p>
+      </figcaption>
+    </figure>
+
+    <p>The first session will consist of an introductory presentation
+in which the motivation and purpose of Comunica will be explained,
+followed by an overview of its architecture.
+Next, we will demonstrate the usage of Comunica
+with several SPARQL queries in the <a href="http://query.linkeddatafragments.org/" class="mandatory" data-link-text="http:/​/​query.linkeddatafragments.org/​">browser-based client</a>.
+After that, we will guide the audience through the installation
+and usage of Comunica within a JavaScript application.</p>
+
+    <p>In the second session, we will focus on the configuration and extensibility of Comunica.
+We will first give an overview of <a property="schema:citation http://purl.org/spar/cito/cites" href="http://componentsjs.readthedocs.io/">Components.js</a> <span class="references">[<a href="#ref-5">5</a>]</span>,
+which is a dependency injection framework
+that Comunica relies upon to handle the configuration of engines.
+After that, we will guide the audience through plugging in a simple new querying algorithm
+inside Comunica using the configuration system.</p>
+
+    <p>The tutorial will be guided by slides,
+which will be shared online after the session.
+For the hands-on coding sessions, we will provide
+a git repository with separate branches for all sequantially completed tasks.
+This will allow participants that are unable to complete a certain task,
+to still begin with the next task by checking out a different branch.</p>
+
+  </section>
+
+  <section id="resources">
+    <h2>Resources</h2>
+
+    <center style="font-size: 2em; text-style: italic">
+Coming soon&#8230;
+<br />
+<span style="font-size: 0.7em">In the meantime, try out our <a href="http://query.linkeddatafragments.org/">Web client</a>.</span>
+</center>
+
+  </section>
+
+  <section id="organizers">
+    <h2>Organizers</h2>
+
+    <p>This tutorial will be presented by Ruben Taelman and Joachim Van Herwegen from Ghent University – imec.
+Ruben and Joachim are finishing PhD students who are active in the research domain of querying Linked Data.
+Furthermore, they are the main designers and developers of Comunica, which makes them uniquely qualified to present this tutorial.
+Ruben and Joachim both have presented tutorials at conferences in the past <span class="references">[<a href="#ref-4">4</a>, <a href="#ref-6">6</a>]</span>,
+and actively coach students within the practical sessions of the
+<a href="http://rubenverborgh.github.io/WebFundamentals/" class="mandatory" data-link-text="http:/​/​rubenverborgh.github.io/​WebFundamentals/​">Web Development course</a> by Ruben Verborgh at Ghent University.</p>
+
+  </section>
+
+</main>
+
+<footer><section id="references">
+<h2>References</h2>
+<dl class="references">
+  <dt id="ref-1">[1]</dt>
+  <dd resource="#semanticweb" typeof="schema:Article">Berners-Lee, T., Hendler, J., Lassila, O., others: The semantic web. Scientific American. 284, 28–37 (2001).</dd>
+  <dt id="ref-2">[2]</dt>
+  <dd resource="https://comunica.github.io/Article-ISWC2018-Resource/" typeof="schema:Article">Taelman, R., Van Herwegen, J., Vander Sande, M., Verborgh, R.: Comunica: a Modular SPARQL Query Engine for the Web. In: Proceedings of the 17th International Semantic Web Conference (2018).</dd>
+  <dt id="ref-3">[3]</dt>
+  <dd resource="https://www.w3.org/TR/2013/REC-sparql11-query-20130321/" typeof="schema:CreativeWork">Harris, S., Seaborne, A., Prud’hommeaux, E.: SPARQL 1.1 Query Language. W3C, <a href="https://www.w3.org/TR/2013/REC-sparql11-query-20130321/">https:/​/​www.w3.org/TR/2013/REC-sparql11-query-20130321/</a> (2013).</dd>
+  <dt id="ref-4">[4]</dt>
+  <dd resource="#cikm" typeof="schema:Article">Van Herwegen, J., Heyvaert, P., Taelman, R., De Meester, B., Dimou, A.: Knowledge Representation as Linked Data: Tutorial. In: Proceedings of the 27th ACM International Conference on Information and Knowledge Management. pp. 2299–2300. ACM (2018).</dd>
+  <dt id="ref-5">[5]</dt>
+  <dd resource="http://componentsjs.readthedocs.io/" typeof="schema:Article">Taelman, R., Vander Sande, M., Verborgh, R.: Components.js: A Semantic Dependency Injection Framework. In: Proceedings of the The Web Conference: Developers Track (2018).</dd>
+  <dt id="ref-6">[6]</dt>
+  <dd resource="#ekaw" typeof="schema:Article">Dimou, A., Heyvaert, P., Taelman, R., Verborgh, R.: Modeling, Generating, and Publishing Knowledge as Linked Data. In: European Knowledge Acquisition Workshop. pp. 3–14. Springer (2016).</dd>
+</dl>
+</section>
+</footer>
+
+
+
+</body about="" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# dcterms: http://purl.org/dc/terms/ dctypes: http://purl.org/dc/dcmitype/ foaf: http://xmlns.com/foaf/0.1/ v: http://www.w3.org/2006/vcard/ns# pimspace: http://www.w3.org/ns/pim/space# cc: https://creativecommons.org/ns# skos: http://www.w3.org/2004/02/skos/core# prov: http://www.w3.org/ns/prov# qb: http://purl.org/linked-data/cube# schema: http://schema.org/ void: http://rdfs.org/ns/void# rsa: http://www.w3.org/ns/auth/rsa# cert: http://www.w3.org/ns/auth/cert# cal: http://www.w3.org/2002/12/cal/ical# wgs: http://www.w3.org/2003/01/geo/wgs84_pos# org: http://www.w3.org/ns/org# biblio: http://purl.org/net/biblio# bibo: http://purl.org/ontology/bibo/ book: http://purl.org/NET/book/vocab# ov: http://open.vocab.org/terms/ sioc: http://rdfs.org/sioc/ns# doap: http://usefulinc.com/ns/doap# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ sio: http://semanticscience.org/resource/ opmw: http://www.opmw.org/ontology/ deo: http://purl.org/spar/deo/ doco: http://purl.org/spar/doco/ cito: http://purl.org/spar/cito/ fabio: http://purl.org/spar/fabio/ oa: http://www.w3.org/ns/oa# as: https://www.w3.org/ns/activitystreams# ldp: http://www.w3.org/ns/ldp# solid: http://www.w3.org/ns/solid/terms# acl: http://www.w3.org/ns/auth/acl# dio: https://w3id.org/dio#" typeof="schema:CreativeWork sioc:Post prov:Entity">
+</html>

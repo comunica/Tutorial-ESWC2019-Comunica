@@ -7,6 +7,22 @@ In the next session, the more advanced concepts will be handled.
 Both sessions will start with short presentations,
 and the end will be practical.
 
+<figure id="planning" markdown="1" class="table">
+
+|                                  | Topic | Duration |
+|----------------------------------|-------|----------|
+| **Part 1: basic** (_1:30_)       | Introduction to Comunica | 0:30   |
+|                                  | Browser usage examples  | 0:15   |
+|                                  | Usage inside an application | 0:45   |
+| *Break*                          | ---  | --- |
+| **Part 2: advanced** (_1:30_)    | Configuration with Components.js | 0:30   |
+|                                  | Adding a custom algorithm | 1:00   |
+
+<figcaption markdown="block">
+Planning of the Comunica tutorial, split into basic and advanced sessions.
+</figcaption>
+</figure>
+
 The first session will consist of an introductory presentation
 in which the motivation and purpose of Comunica will be explained,
 followed by an overview of its architecture.
@@ -28,18 +44,3 @@ For the hands-on coding sessions, we will provide
 a git repository with separate branches for all sequantially completed tasks.
 This will allow participants that are unable to complete a certain task,
 to still begin with the next task by checking out a different branch.
-
-<figure id="planning" markdown="1" class="table">
-
-|                                  | Topic | Duration |
-|----------------------------------|-------|----------|
-| **Part 1: basic** (_1:30_)       | Introduction to Comunica | 0:30   |
-|                                  | Browser usage examples  | 0:15   |
-|                                  | Usage inside an application | 0:45   |
-| **Part 2: advanced** (_1:30_)    | Configuration with Components.js | 0:30   |
-|                                  | Adding a custom algorithm | 1:00   |
-
-<figcaption markdown="block">
-Planning of the Comunica tutorial
-</figcaption>
-</figure>

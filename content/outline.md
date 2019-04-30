@@ -19,7 +19,7 @@ and the end will be practical.
 |                                  | Adding a custom algorithm | 1:00   |
 
 <figcaption markdown="block">
-Planning of the Comunica tutorial, split into basic and advanced sessions.
+Planning of the Comunica tutorial (9:00 - 12:30), split into basic and advanced sessions.
 </figcaption>
 </figure>
 

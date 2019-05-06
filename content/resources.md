@@ -10,7 +10,7 @@
 ### Basic part
 
 * [Slides](https://comunica.github.io/Tutorial-ESWC2019-Comunica-Basic-Slides/)
-* [Tutorial walkthrough](https://github.com/comunica/Tutorial-Comunica-Web-Service/wiki/Comunica-tutorial:-Querying-Data)
+* [Tutorial walkthrough](https://github.com/comunica/Tutorial-Comunica-Querying-Data/wiki/Comunica-tutorial:-Querying-Data)
 
 ### Advanced part
 

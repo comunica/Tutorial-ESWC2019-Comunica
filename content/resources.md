@@ -22,5 +22,6 @@
 * [Comunica Web client](http://query.linkeddatafragments.org/)
 * [Comunica documentation](https://comunica.readthedocs.io/en/latest/)
 * [Components.js documentation](https://componentsjs.readthedocs.io/en/latest/)
+* [Comunica JSDoc](https://comunica.github.io/comunica/)
 * [Comunica source](https://github.com/comunica/comunica)
 * [Components.js source](https://github.com/LinkedSoftwareDependencies/Components.js)
